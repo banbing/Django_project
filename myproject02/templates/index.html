@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>上交所技术有限责任公司专线管理</title>
+    <style>
+        div.data{
+            position: absolute;
+            top: 400px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            overflow-x:scroll;
+        }
+        table,th,td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        div.select{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 400px;
+            background-color: aquamarine;
+        }
+
+        tbody {
+            display:block;
+            overflow-y:scroll;
+        }
+        thead {
+            display:block;
+            overflow-y:scroll;
+        }
+        thead, tbody tr{
+            display:table;
+            width: 100%;
+            table-layout:fixed;
+        }
+        table thead {
+            width: calc( 100% - 1em )
+        }
+    </style>
+
+</head>
+<body>
+<div class="select">
+
+
+</div>
+<div class="data">
+    <table>
+            <thead>
+                <tr>
+                    <th><nobr>序号</nobr></th>
+                    <th><nobr>登记编号</nobr></th>
+                    <th><nobr>用户名称</nobr></th>
+                    <th><nobr>业务类型</nobr></th>
+                    <th><nobr>申请依据</nobr></th>
+                    <th><nobr>申请类型</nobr></th>
+                    <th><nobr>速率</nobr></th>
+                    <th><nobr>线路类型</nobr></th>
+                    <th><nobr>地域</nobr></th>
+                    <th><nobr>一次性费用</nobr></th>
+{#                    <th><nobr>月租</nobr></th>#}
+{#                    <th><nobr>计费开始日期</nobr></th>#}
+{#                    <th><nobr>计费结束日期</nobr></th>#}
+{#                    <th><nobr>本端地址</nobr></th>#}
+{#                    <th><nobr>对端地址</nobr></th>#}
+{#                    <th><nobr>VLAN</nobr></th>#}
+{#                    <th><nobr>联系人</nobr></th>#}
+{#                    <th><nobr>联系电话</nobr></th>#}
+{#                    <th><nobr>申请时间</nobr></th>#}
+{#                    <th><nobr>合同号</nobr></th>#}
+{#                    <th><nobr>首次同用户确认日期</nobr></th>#}
+{#                    <th><nobr>提交用章日期</nobr></th>#}
+{#                    <th><nobr>原件邮寄日期</nobr></th>#}
+{#                    <th><nobr>工单号</nobr></th>#}
+{#                    <th><nobr>收到时间</nobr></th>#}
+{#                    <th><nobr>专线编号</nobr></th>#}
+{#                    <th><nobr>施工日期</nobr></th>#}
+{#                    <th><nobr>正是完工日期</nobr></th>#}
+{#                    <th><nobr>是否告知用户</nobr></th>#}
+{#                    <th><nobr>运营商验收单是否提供</nobr></th>#}
+{#                    <th><nobr>备注</nobr></th>#}
+                </tr>
+            </thead>
+            <tbody>
+            {% for row in data %}
+                <tr>
+                    <td>{{ row.id }}</td>
+                    <td>{{ row.register_num }}</td>
+                    <td>{{ row.customer }}</td>
+                    <td>{{ row.server_type }}</td>
+                    <td>{{ row.apply_basis }}</td>
+                    <td>{{ row.apply_type }}</td>
+                    <td>{{ row.speed }}</td>
+                    <td>{{ row.line_type }}</td>
+                    <td>{{ row.area }}</td>
+                    <td>{{ row.nonrecurring_expense }}</td>
+{#                    <td>{{ row.monthly_fee }}</td>#}
+{#                    <td>{{ row.billing_begin }}</td>#}
+{#                    <td>{{ row.billing_end }}</td>#}
+{#                    <td>{{ row.local_address }}</td>#}
+{#                    <td>{{ row.remote_address}}</td>#}
+{#                    <td>{{ row.vlan }}</td>#}
+{#                    <td>{{ row.username }}</td>#}
+{#                    <td>{{ row.phone_num }}</td>#}
+{#                    <td>{{ row.apply_date }}</td>#}
+{#                    <td>{{ row.contract_num }}</td>#}
+{#                    <td>{{ row.first_confirm_date }}</td>#}
+{#                    <td>{{ row.apply_seal_date }}</td>#}
+{#                    <td>{{ row.seal_date }}</td>#}
+{#                    <td>{{ row.order_num }}</td>#}
+{#                    <td>{{ row.receive_order_date }}</td>#}
+{#                    <td>{{ row.line_num }}</td>#}
+{#                    <td>{{ row.construct_date }}</td>#}
+{#                    <td>{{ row.complete_date }}</td>#}
+{#                    <td>{{ row.notice_customer }}</td>#}
+{#                    <td>{{ row.isp_report }}</td>#}
+{#                    <td>{{ row.note }}</td>#}
+                </tr>
+
+            {% endfor %}
+            </tbody>
+    </table>
+</div>
+</body>
+</html>
